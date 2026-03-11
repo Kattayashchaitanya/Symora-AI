@@ -1,0 +1,46 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00897B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00695C;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF5252;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="128" height="128" fill="url(#primaryGradient)" rx="24"/>
+
+  <!-- Inner Light Background -->
+  <rect x="8" y="8" width="112" height="112" fill="#f0f9f8" rx="20" opacity="0.95"/>
+
+  <!-- Medical Cross (Left) -->
+  <g>
+    <rect x="35" y="20" width="5" height="40" fill="url(#primaryGradient)" rx="2"/>
+    <rect x="20" y="48" width="40" height="5" fill="url(#primaryGradient)" rx="2"/>
+  </g>
+
+  <!-- Heartbeat Line (Right) -->
+  <g>
+    <polyline points="70,40 75,35 78,45 82,20 88,70 94,40" 
+              stroke="url(#accentGradient)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- AI Circuit Nodes -->
+  <g fill="#00897B" opacity="0.6">
+    <circle cx="40" cy="80" r="2.5"/>
+    <circle cx="88" cy="80" r="2.5"/>
+    <circle cx="64" cy="100" r="2.5"/>
+  </g>
+
+  <!-- Circuit Connections -->
+  <g stroke="#00897B" stroke-width="1" fill="none" opacity="0.4">
+    <line x1="40" y1="80" x2="64" y2="100"/>
+    <line x1="88" y1="80" x2="64" y2="100"/>
+  </g>
+
+  <!-- Tech Ring -->
+  <circle cx="64" cy="64" r="48" stroke="url(#accentGradient)" stroke-width="1.5" fill="none" opacity="0.5"/>
+</svg>

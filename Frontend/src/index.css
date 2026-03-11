@@ -1,0 +1,221 @@
+@import "@fontsource/outfit/300.css";
+@import "@fontsource/outfit/400.css";
+@import "@fontsource/outfit/500.css";
+@import "@fontsource/outfit/600.css";
+@import "@fontsource/outfit/700.css";
+
+/* ==========================================================================
+   CSS Design Tokens (Dark Mode Default)
+   ========================================================================== */
+:root {
+  /* Brand Colors - Futuristic Neon Aesthetics */
+  --primary-50: rgba(6, 182, 212, 0.1);
+  --primary-100: rgba(6, 182, 212, 0.2);
+  --primary-400: #22d3ee;
+  --primary-500: #06b6d4;
+  --primary-600: #0891b2;
+  --primary-700: #0e7490;
+
+  --secondary-500: #8b5cf6;
+  --secondary-600: #7c3aed;
+
+  --success-50: rgba(16, 185, 129, 0.1);
+  --success-100: rgba(16, 185, 129, 0.2);
+  --success-400: #34d399;
+  --success-500: #10b981;
+  --success-600: #059669;
+  --success-700: #047857;
+
+  --warning-50: rgba(245, 158, 11, 0.1);
+  --warning-500: #f59e0b;
+  --warning-600: #d97706;
+  --warning-700: #b45309;
+
+  --danger-50: rgba(239, 68, 68, 0.1);
+  --danger-400: #f87171;
+  --danger-500: #ef4444;
+  --danger-600: #dc2626;
+  --danger-700: #b91c1c;
+
+  /* Surface Colors - Deep Dark */
+  --surface-100: rgba(15, 23, 42, 0.7);
+  --surface-200: rgba(30, 41, 59, 0.7);
+  --surface-300: #020617;
+  --surface-400: rgba(148, 163, 184, 0.2);
+
+  /* Card surfaces for component use */
+  --card-bg: rgba(15, 23, 42, 0.6);
+  --card-bg-hover: rgba(30, 41, 59, 0.7);
+  --card-border: rgba(148, 163, 184, 0.15);
+  --card-border-accent: rgba(34, 211, 238, 0.25);
+  --input-bg: rgba(255, 255, 255, 0.05);
+  --input-border: rgba(148, 163, 184, 0.25);
+  --sidebar-bg: rgba(15, 23, 42, 0.5);
+  --mobile-header-bg: rgba(15, 23, 42, 0.7);
+
+  /* Text Colors */
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-tertiary: #94a3b8;
+
+  /* Auth page tokens */
+  --primary-color: #5eead4;
+  --secondary-color: #10b981;
+  --bg-color: #0a0f1e;
+  --text-color: #e2e8f0;
+  --text-muted: #64748b;
+  --border-color: rgba(255, 255, 255, 0.1);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(6, 182, 212, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(6, 182, 212, 0.15);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(6, 182, 212, 0.2);
+  --shadow-glow: 0 0 20px rgba(6, 182, 212, 0.4);
+  --shadow-glow-secondary: 0 0 20px rgba(139, 92, 246, 0.4);
+
+  /* Borders and Radii */
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-full: 9999px;
+
+  /* Animation Timing */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   Light Mode Token Overrides
+   ========================================================================== */
+.light-mode {
+  /* Brand Colors adjusted for light */
+  --primary-50: rgba(6, 182, 212, 0.06);
+  --primary-100: rgba(6, 182, 212, 0.12);
+  --primary-400: #0284c7;
+  --primary-500: #0369a1;
+  --primary-600: #075985;
+  --primary-700: #0c4a6e;
+
+  --secondary-500: #6d28d9;
+  --secondary-600: #5b21b6;
+
+  --success-50: rgba(16, 185, 129, 0.06);
+  --success-100: rgba(16, 185, 129, 0.12);
+  --success-400: #059669;
+  --success-500: #059669;
+  --success-600: #047857;
+  --success-700: #064e3b;
+
+  --warning-50: rgba(245, 158, 11, 0.06);
+  --warning-500: #d97706;
+  --warning-600: #b45309;
+  --warning-700: #78350f;
+
+  --danger-50: rgba(239, 68, 68, 0.06);
+  --danger-400: #dc2626;
+  --danger-500: #dc2626;
+  --danger-600: #b91c1c;
+  --danger-700: #7f1d1d;
+
+  /* Surface Colors - Clean bright palette */
+  --surface-100: #ffffff;
+  --surface-200: #f8fafc;
+  --surface-300: #f1f5f9;
+  --surface-400: rgba(148, 163, 184, 0.4);
+
+  /* Card/component surfaces */
+  --card-bg: #ffffff;
+  --card-bg-hover: #f8fafc;
+  --card-border: rgba(148, 163, 184, 0.3);
+  --card-border-accent: rgba(2, 132, 199, 0.25);
+  --input-bg: #ffffff;
+  --input-border: #cbd5e1;
+  --sidebar-bg: #ffffff;
+  --mobile-header-bg: rgba(255, 255, 255, 0.95);
+
+  /* Text Colors */
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-tertiary: #64748b;
+
+  /* Auth page tokens */
+  --primary-color: #0284c7;
+  --secondary-color: #059669;
+  --bg-color: #f1f5f9;
+  --text-color: #0f172a;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+
+  /* Shadows (lighter, crisper) */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.08), 0 4px 6px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.08), 0 10px 10px rgba(0, 0, 0, 0.03);
+  --shadow-glow: 0 0 15px rgba(2, 132, 199, 0.2);
+  --shadow-glow-secondary: 0 0 15px rgba(109, 40, 217, 0.2);
+}
+
+/* ==========================================================================
+   Global Reset & Base
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  width: 100%;
+  font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark mode body */
+body {
+  background-color: #020617;
+  color: var(--text-primary);
+  background: radial-gradient(circle at top right, rgba(6, 182, 212, 0.12) 0%, transparent 40%),
+              radial-gradient(circle at bottom left, rgba(139, 92, 246, 0.12) 0%, transparent 40%),
+              #020617;
+  background-attachment: fixed;
+}
+
+/* Light mode body - MUST target body within .light-mode class on body element */
+body.light-mode {
+  background-color: #f1f5f9;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f0f9ff 100%);
+  background-attachment: fixed;
+}
+
+#root {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ==========================================================================
+   Custom Scrollbar
+   ========================================================================== */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--surface-400);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}

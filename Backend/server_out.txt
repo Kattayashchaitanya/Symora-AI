@@ -1,0 +1,7 @@
+[dotenv@17.3.1] injecting env (2) from .env -- tip: 🤖 agentic secret storage: https://dotenvx.com/as2
+Server running on port 5000
+Connected to the SQLite database.
+Analyzing report, image size: 86 KB
+Analyzing report, image size: 86 KB
+Analyzing report, image size: 86 KB
+Analyzing report, image size: 76 KB

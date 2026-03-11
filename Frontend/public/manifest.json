@@ -1,0 +1,93 @@
+{
+  "name": "SymoraAI - AI Healthcare Triage",
+  "short_name": "SymoraAI",
+  "description": "Intelligent symptom triage system with AI analysis, hospital finder, and health tips - available in English, Hindi, and Telugu",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#00897B",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["healthcare", "medical"],
+  "screenshots": [
+    {
+      "src": "/logo.svg",
+      "sizes": "540x720",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/logo.svg",
+      "sizes": "1080x1440",
+      "type": "image/svg+xml"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Analyze Symptoms",
+      "short_name": "Triage",
+      "description": "Quickly analyze your health symptoms",
+      "url": "/?mode=triage",
+      "icons": [
+        {
+          "src": "/favicon.svg",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Find Hospitals",
+      "short_name": "Hospitals",
+      "description": "Find nearby hospitals with directions",
+      "url": "/?mode=hospitals",
+      "icons": [
+        {
+          "src": "/favicon.svg",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Health Tips",
+      "short_name": "Tips",
+      "description": "Get wellness recommendations",
+      "url": "/?mode=tips",
+      "icons": [
+        {
+          "src": "/favicon.svg",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "prefer_related_applications": false
+}

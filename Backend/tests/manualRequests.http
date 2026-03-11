@@ -1,0 +1,76 @@
+@baseUrl = http://localhost:5000
+
+### Health check
+GET {{baseUrl}}/
+
+### English - HIGH risk
+POST {{baseUrl}}/api/triage
+Content-Type: application/json
+
+{
+  "symptoms": "chest pain and trouble breathing",
+  "language": "English"
+}
+
+### English - LOW risk
+POST {{baseUrl}}/api/triage
+Content-Type: application/json
+
+{
+  "symptoms": "mild cold with headache",
+  "language": "English"
+}
+
+### Hindi - HIGH risk
+POST {{baseUrl}}/api/triage
+Content-Type: application/json; charset=utf-8
+
+{
+  "symptoms": "सीने में दर्द और सांस लेने में दिक्कत",
+  "language": "Hindi"
+}
+
+### Hindi - LOW risk
+POST {{baseUrl}}/api/triage
+Content-Type: application/json; charset=utf-8
+
+{
+  "symptoms": "हल्का जुकाम और सिरदर्द",
+  "language": "Hindi"
+}
+
+### Telugu - HIGH risk
+POST {{baseUrl}}/api/triage
+Content-Type: application/json; charset=utf-8
+
+{
+  "symptoms": "ఛాతి నొప్పి మరియు శ్వాస తీసుకోవడంలో ఇబ్బంది",
+  "language": "Telugu"
+}
+
+### Telugu - LOW risk
+POST {{baseUrl}}/api/triage
+Content-Type: application/json; charset=utf-8
+
+{
+  "symptoms": "తేలికపాటి జలుబు మరియు తలనొప్పి",
+  "language": "Telugu"
+}
+
+### Unsupported language should return 400
+POST {{baseUrl}}/api/triage
+Content-Type: application/json
+
+{
+  "symptoms": "headache and mild cold",
+  "language": "Spanish"
+}
+
+### Missing symptoms should return 400
+POST {{baseUrl}}/api/triage
+Content-Type: application/json
+
+{
+  "symptoms": "",
+  "language": "English"
+}

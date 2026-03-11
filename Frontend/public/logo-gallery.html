@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SymoraAI Logo Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .logos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .logo-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .logo-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+        }
+
+        .logo-card h3 {
+            color: #00695C;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .logo-display {
+            background: #f0f9f8;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 20px;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .logo-display svg {
+            width: 100%;
+            height: 100%;
+            max-width: 250px;
+            max-height: 250px;
+        }
+
+        .logo-description {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .usage-section {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .usage-section h2 {
+            color: #00695C;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .usage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .usage-item {
+            background: #f0f9f8;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #FF6B6B;
+        }
+
+        .usage-item h4 {
+            color: #FF6B6B;
+            margin-bottom: 10px;
+        }
+
+        .usage-item p {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .color-palette {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .color-palette h2 {
+            color: #00695C;
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+
+        .colors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .color-swatch {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .color-sample {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .color-info {
+            background: white;
+            padding: 15px;
+            color: #333;
+            font-size: 13px;
+        }
+
+        .color-info p {
+            margin-bottom: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .footer p {
+            margin-bottom: 5px;
+            opacity: 0.9;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255,107,107,0.9);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🏥 SymoraAI Logo Gallery</h1>
+            <p>Professional Logo Versions & Brand Guidelines</p>
+            <p style="font-size: 14px; margin-top: 10px;">v2.0 Production Ready <span class="badge">FINAL</span></p>
+        </div>
+
+        <!-- Logo Versions Grid -->
+        <div class="logos-grid">
+            <!-- Circle Logo -->
+            <div class="logo-card">
+                <h3>🎯 Circle Logo (Primary)</h3>
+                <div class="logo-display">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 180px; height: 180px;">
+                        <defs>
+                            <linearGradient id="hg1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00897B;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#00695C;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="ag1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#FF5252;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="100" cy="100" r="95" fill="url(#hg1)" stroke="#00695C" stroke-width="2"/>
+                        <circle cx="100" cy="100" r="85" fill="#f0f9f8" opacity="0.95"/>
+                        <rect x="75" y="55" width="8" height="50" fill="url(#hg1)" rx="2"/>
+                        <rect x="55" y="80" width="50" height="8" fill="url(#hg1)" rx="2"/>
+                        <polyline points="130,90 135,85 138,95 142,70 148,105 155,80" stroke="url(#ag1)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="70" cy="135" r="3" fill="#00897B" opacity="0.6"/>
+                        <circle cx="130" cy="135" r="3" fill="#00897B" opacity="0.6"/>
+                        <circle cx="100" cy="150" r="3" fill="#00897B" opacity="0.6"/>
+                        <line x1="70" y1="135" x2="100" y2="150" stroke="#00897B" stroke-width="1.5" fill="none" opacity="0.4"/>
+                        <line x1="130" y1="135" x2="100" y2="150" stroke="#00897B" stroke-width="1.5" fill="none" opacity="0.4"/>
+                        <circle cx="100" cy="100" r="50" stroke="#FF6B6B" stroke-width="2" fill="none" opacity="0.7"/>
+                        <text x="100" y="175" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#00695C" letter-spacing="1">SYMORAAI</text>
+                    </svg>
+                </div>
+                <div class="logo-description">
+                    <p><strong>File:</strong> logo.svg</p>
+                    <p><strong>Size:</strong> 200x200 px (Scalable)</p>
+                    <p><strong>Use Case:</strong> Social media, avatars, icons, profile pictures</p>
+                    <p><strong>Recommended Size Range:</strong> 48px - 400px</p>
+                </div>
+            </div>
+
+            <!-- Horizontal Logo -->
+            <div class="logo-card">
+                <h3>📰 Horizontal Logo (Secondary)</h3>
+                <div class="logo-display" style="padding: 15px;">
+                    <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 280px;">
+                        <defs>
+                            <linearGradient id="hg2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00897B;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#00695C;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="ag2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#FF5252;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="60" cy="60" r="50" fill="url(#hg2)" stroke="#00695C" stroke-width="2"/>
+                        <circle cx="60" cy="60" r="45" fill="#f0f9f8" opacity="0.95"/>
+                        <rect x="50" y="35" width="5" height="35" fill="url(#hg2)" rx="2"/>
+                        <rect x="35" y="52" width="35" height="5" fill="url(#hg2)" rx="2"/>
+                        <polyline points="75,50 78,46 80,54 83,35 88,65 93,45" stroke="url(#ag2)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="50" cy="70" r="2" fill="#00897B" opacity="0.6"/>
+                        <circle cx="70" cy="70" r="2" fill="#00897B" opacity="0.6"/>
+                        <text x="140" y="55" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#00695C" letter-spacing="2">SymoraAI</text>
+                        <text x="140" y="73" font-family="Arial, sans-serif" font-size="10" fill="#FF6B6B" font-weight="500" letter-spacing="1">AI-POWERED HEALTHCARE</text>
+                        <rect x="320" y="45" width="60" height="25" fill="url(#ag2)" rx="4" opacity="0.9"/>
+                        <text x="350" y="63" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">v2.0</text>
+                    </svg>
+                </div>
+                <div class="logo-description">
+                    <p><strong>File:</strong> logo-horizontal.svg</p>
+                    <p><strong>Size:</strong> 400x120 px (Scalable)</p>
+                    <p><strong>Use Case:</strong> Headers, banners, website top bar, presentations</p>
+                    <p><strong>Aspect Ratio:</strong> 3.33:1 (landscape)</p>
+                </div>
+            </div>
+
+            <!-- Favicon -->
+            <div class="logo-card">
+                <h3>🔖 Favicon (Icon Only)</h3>
+                <div class="logo-display">
+                    <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" style="width: 150px; height: 150px;">
+                        <defs>
+                            <linearGradient id="pg1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00897B;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#00695C;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="ag3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#FF5252;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="128" height="128" fill="url(#pg1)" rx="24"/>
+                        <rect x="8" y="8" width="112" height="112" fill="#f0f9f8" rx="20" opacity="0.95"/>
+                        <rect x="35" y="20" width="5" height="40" fill="url(#pg1)" rx="2"/>
+                        <rect x="20" y="48" width="40" height="5" fill="url(#pg1)" rx="2"/>
+                        <polyline points="70,40 75,35 78,45 82,20 88,70 94,40" stroke="url(#ag3)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="40" cy="80" r="2.5" fill="#00897B" opacity="0.6"/>
+                        <circle cx="88" cy="80" r="2.5" fill="#00897B" opacity="0.6"/>
+                        <circle cx="64" cy="100" r="2.5" fill="#00897B" opacity="0.6"/>
+                        <line x1="40" y1="80" x2="64" y2="100" stroke="#00897B" stroke-width="1" fill="none" opacity="0.4"/>
+                        <line x1="88" y1="80" x2="64" y2="100" stroke="#00897B" stroke-width="1" fill="none" opacity="0.4"/>
+                        <circle cx="64" cy="64" r="48" stroke="url(#ag3)" stroke-width="1.5" fill="none" opacity="0.5"/>
+                    </svg>
+                </div>
+                <div class="logo-description">
+                    <p><strong>File:</strong> favicon.svg</p>
+                    <p><strong>Size:</strong> 128x128 px (Scalable)</p>
+                    <p><strong>Use Case:</strong> Browser tab icon, bookmarks, iOS/Android home screen</p>
+                    <p><strong>Minimum Size:</strong> 32px</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Color Palette -->
+        <div class="color-palette">
+            <h2>🎨 Brand Color Palette</h2>
+            <div class="colors-grid">
+                <div class="color-swatch">
+                    <div class="color-sample" style="background: linear-gradient(135deg, #00897B, #00695C);">
+                        Primary Green
+                    </div>
+                    <div class="color-info">
+                        <p><strong>Name:</strong> Healthcare Green</p>
+                        <p><strong>Hex:</strong> #00897B</p>
+                        <p><strong>RGB:</strong> (0, 137, 123)</p>
+                        <p><strong>Use:</strong> Primary elements</p>
+                    </div>
+                </div>
+
+                <div class="color-swatch">
+                    <div class="color-sample" style="background: linear-gradient(135deg, #FF6B6B, #FF5252);">
+                        Accent Red
+                    </div>
+                    <div class="color-info">
+                        <p><strong>Name:</strong> Heartbeat Red</p>
+                        <p><strong>Hex:</strong> #FF6B6B</p>
+                        <p><strong>RGB:</strong> (255, 107, 107)</p>
+                        <p><strong>Use:</strong> Secondary elements</p>
+                    </div>
+                </div>
+
+                <div class="color-swatch">
+                    <div class="color-sample" style="background: #f0f9f8; color: #00695C;">
+                        Background
+                    </div>
+                    <div class="color-info">
+                        <p><strong>Name:</strong> Light Teal</p>
+                        <p><strong>Hex:</strong> #f0f9f8</p>
+                        <p><strong>RGB:</strong> (240, 249, 248)</p>
+                        <p><strong>Use:</strong> Light backgrounds</p>
+                    </div>
+                </div>
+
+                <div class="color-swatch">
+                    <div class="color-sample" style="background: #00695C;">
+                        Dark Variant
+                    </div>
+                    <div class="color-info">
+                        <p><strong>Name:</strong> Dark Green</p>
+                        <p><strong>Hex:</strong> #00695C</p>
+                        <p><strong>RGB:</strong> (0, 105, 92)</p>
+                        <p><strong>Use:</strong> Text, shadows</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Usage Section -->
+        <div class="usage-section">
+            <h2>💡 Logo Usage Guidelines</h2>
+            <div class="usage-grid">
+                <div class="usage-item">
+                    <h4>✅ Excellent Uses</h4>
+                    <p>
+                        • Website headers & footers<br>
+                        • Social media profiles<br>
+                        • Email signatures<br>
+                        • Business cards<br>
+                        • App icons & favicons
+                    </p>
+                </div>
+
+                <div class="usage-item">
+                    <h4>⚠️ Be Careful With</h4>
+                    <p>
+                        • Minimum 48px size for digital<br>
+                        • Maintain whitespace around logo<br>
+                        • Avoid busy backgrounds<br>
+                        • Don't rotate or skew<br>
+                        • Preserve aspect ratio
+                    </p>
+                </div>
+
+                <div class="usage-item">
+                    <h4>❌ Never Do</h4>
+                    <p>
+                        • Change colors without approval<br>
+                        • Distort or reshape logo<br>
+                        • Use on conflicting backgrounds<br>
+                        • Combine with other logos<br>
+                        • Use below minimum size
+                    </p>
+                </div>
+
+                <div class="usage-item">
+                    <h4>📱 Responsive Design</h4>
+                    <p>
+                        • Desktop: 200-400px<br>
+                        • Tablet: 100-200px<br>
+                        • Mobile: 48-96px<br>
+                        • Favicon: 32-64px<br>
+                        • Always use SVG format
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>🏥 <strong>SymoraAI v2.0</strong> - AI-Powered Healthcare Triage System</p>
+            <p>Logo created: February 25, 2026 | Status: Production Ready ✅</p>
+            <p style="font-size: 12px; margin-top: 15px; opacity: 0.7;">
+                Files: logo.svg | logo-horizontal.svg | favicon.svg
+            </p>
+        </div>
+    </div>
+</body>
+</html>
